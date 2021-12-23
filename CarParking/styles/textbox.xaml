@@ -1,0 +1,70 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:курсовой.styles">
+
+    <!--<Grid>
+            <Border Name="border" BorderBrush="White" BorderThickness="1" TextBlock.Foreground="Black" Background="White">
+                <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Bottom" Margin="10 0 0 10"/>
+            </Border>
+            <TextBlock x:Name="txtbl" Text="Введите данные" Foreground="#898b8e" VerticalAlignment="Bottom" HorizontalAlignment="Left" Visibility="Hidden" Margin="10 0 0 10" FontSize="12"/>
+        </Grid>-->
+    <!--<Style x:Key="all_textbox" TargetType="TextBox">
+        <EventTrigger RoutedEvent="MouseEnter">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="14" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Mouse.MouseLeave">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="12" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Style>-->
+
+    <!--<Button.Style>
+        <Style TargetType="Button">
+            <Style.Triggers>
+
+                --><!-- EventTrigger --><!--
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="14" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="12" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+
+                --><!-- MultiTrigger --><!--
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                        <Condition Property="IsPressed" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Foreground" Value="Red"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Button.Style>-->
+
+</ResourceDictionary>

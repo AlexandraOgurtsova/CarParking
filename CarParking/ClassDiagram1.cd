@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="курсовой.Classes.CommandBD">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAQAAAAAAEAAAAAAAAAQQAQAAA=</HashCode>
+      <FileName>Classes\CommandBD.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="курсовой.DataBase">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAARAAAAAAEQEAAAAAAAQRAAAAA=</HashCode>
+      <FileName>Classes\DataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="курсовой.Classes.MailWork">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>Classes\MailWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CommandBD" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="курсовой.PasswordWork">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Classes\PasswordWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CommandBD" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="курсовой.Classes.pdfWork">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\pdfWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

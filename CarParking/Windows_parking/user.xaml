@@ -1,0 +1,73 @@
+﻿<Window x:Class="курсовой.user"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовой"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Loaded="Window_loaded"
+         ResizeMode="NoResize" WindowStyle="None" Foreground="White"  WindowStartupLocation="CenterScreen" BorderBrush="Black" BorderThickness="0.5"  MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="user" Height="364" Width="800">
+    <Grid Margin="0,42,0.667,1.667">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="28,47,0,0" VerticalAlignment="Top" Width="303"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="356,47,0,0" VerticalAlignment="Top" Width="413"/>
+
+        <DataGrid x:Name="cars" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="102" Margin="374,60,0,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="383" FontSize="12" Loaded="cars_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Number}" Header="Номер" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Mark}" Header="Марка" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Тип" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Colour}" Header="Цвет" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid  IsReadOnly="True" x:Name="places"  HorizontalAlignment="Left" Height="97" Margin="374,167,0,0" VerticalAlignment="Top" Width="383" AutoGenerateColumns="True" CanUserAddRows="False" FontSize="12" Loaded="places_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Car}" Header="Машина" Width="80"/>
+                <DataGridTextColumn Binding="{Binding Number}" Header="Место" Width="65"/>
+                <DataGridTextColumn Binding="{Binding Date_beginning}" Header="Въезд" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Type_of_setting}" Header="Постановка" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Production_period}" Header="Срок" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label  materialDesign:HintAssist.Hint="ЛОГИН" Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="18" Content="Логин" HorizontalAlignment="Left" Margin="39,90,0,0" VerticalAlignment="Top"/>
+        <Label materialDesign:HintAssist.Hint="ЛОГИН" Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="18" Content="Имя" HorizontalAlignment="Left" Margin="39,124,0,0" VerticalAlignment="Top"/>
+        <Label materialDesign:HintAssist.Hint="ЛОГИН" Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="18" Content="Фамилия" HorizontalAlignment="Left" Margin="38,158,0,0" VerticalAlignment="Top"/>
+        <Label materialDesign:HintAssist.Hint="ЛОГИН" Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="18" Content="Номер" HorizontalAlignment="Left" Margin="39,189,0,0" VerticalAlignment="Top"/>
+        <Label materialDesign:HintAssist.Hint="ЛОГИН" Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="18" Content="Почта" HorizontalAlignment="Left" Margin="39,226,0,0" VerticalAlignment="Top"/>
+        <Grid Background="#ff4040" HorizontalAlignment="Left" Height="41" Margin="0,-42,-1,0" VerticalAlignment="Top" Width="799">
+
+            <Button x:Name="Minimize" HorizontalAlignment="Right" Width="84" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Minimize_Click" Margin="0,1,86,5"  >
+                <materialDesign:PackIcon Kind ="WindowMinimize" Height="25" Width="20" />
+            </Button>
+            <Button x:Name="Close" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Close_Click" Margin="0,4,10,5" Width="76">
+                <materialDesign:PackIcon Kind ="windowclose" Height="25" Width="36" />
+            </Button>
+        </Grid>
+        <TextBox Foreground="Black" x:Name="LoginUser" HorizontalAlignment="Left" Height="23" Margin="127,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"/>
+        <TextBox Foreground="Black" x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="127,124,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"/>
+        <TextBox Foreground="Black" x:Name="SecondName" HorizontalAlignment="Left" Height="23" Margin="127,158,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"/>
+        <TextBox Foreground="Black" x:Name="Mobile" HorizontalAlignment="Left" Height="23" Margin="127,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"/>
+        <TextBox Foreground="Black" x:Name="Mail" HorizontalAlignment="Left" Height="23" Margin="127,226,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="151"/>
+        <Button x:Name="ch_login" BorderBrush="{x:Null}" Background="#ff4040"  HorizontalAlignment="Left" Margin="278,88,0,0" VerticalAlignment="Top" Width="47" Height="25" Click="change_login_click" >
+            <materialDesign:PackIcon Kind ="build" Height="9" Width="13" />
+        </Button>
+        <Button x:Name="ch_name" BorderBrush="{x:Null}" Background="#ff4040"  HorizontalAlignment="Left" Margin="278,124,0,0" VerticalAlignment="Top" Width="47" Height="25" Click="change_name_click">
+            <materialDesign:PackIcon Kind ="build" Height="9" Width="13" />
+        </Button>
+        <Button x:Name="ch_surname" BorderBrush="{x:Null}" Background="#ff4040"  HorizontalAlignment="Left" Margin="278,158,0,0" VerticalAlignment="Top" Width="47" Height="25" Click="change_surname_click">
+            <materialDesign:PackIcon Kind ="build" Height="9" Width="13" />
+        </Button>
+        <Button x:Name="ch_mobile" BorderBrush="{x:Null}" Background="#ff4040"  HorizontalAlignment="Left" Margin="278,189,0,0" VerticalAlignment="Top" Width="47" Height="25" Click="change_mobile_click">
+            <materialDesign:PackIcon Kind ="build" Height="9" Width="13" />
+        </Button>
+        <Button x:Name="ch_mail" BorderBrush="{x:Null}" Background="#ff4040"  HorizontalAlignment="Left" Margin="278,224,0,0" VerticalAlignment="Top" Width="47" Height="25" Click="change_mail_click">
+            <materialDesign:PackIcon Kind ="build" Height="9" Width="13" />
+        </Button>
+        <Button x:Name="ch_password" BorderBrush="{x:Null}" Background="#ff4040" Content="Изменить пароль" HorizontalAlignment="Left" Margin="99,269,0,0" VerticalAlignment="Top" Width="156" Height="27" Click="ch_password_Click"/>
+        <Button x:Name="map" BorderBrush="{x:Null}" Background="#ff4040" Content="Карта стоянки" HorizontalAlignment="Left" Margin="472,269,0,0" VerticalAlignment="Top" Width="161" Height="27" Click="map_Click"/>
+        <Label Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="22" Content="Пользователь" HorizontalAlignment="Left" Margin="28,12,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="exit" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Silver" Content="Выход" HorizontalAlignment="Left" Margin="723,0,0,0" VerticalAlignment="Top" Width="75" Click="exit_Click"/>
+        <Label Foreground="Black" FontFamily="Champagne &amp; Limousines" FontSize="22" Content="Информация" HorizontalAlignment="Left" Margin="356,10,0,0" VerticalAlignment="Top"/>
+        
+    </Grid>
+</Window>
